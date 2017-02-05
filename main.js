@@ -1,3 +1,5 @@
+var currentUser;
+
 var loadUserData = function(){
 	$.ajax({
 		type: 'GET',
