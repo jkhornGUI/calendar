@@ -1,38 +1,75 @@
+// userID used to hold userID of user selected
 var userID;
-var test;
 
+/**
+*	loadUserData()
+*	This function takes the values selected/entered by the user.
+*	It executes an ajax call to retrieve info of all users.
+*	Returns void
+*/
 var loadUserData = function(){
 
+	// get userID from the user selected
 	userID = $('#user').val();
-	password = $('#pwd').val();
+	
+	// get pass entered by user
+	var entPass = $('#pwd').val();
 
+	// ajax call to get json of all user data
 	$.ajax({
 		type: 'GET',
 		url: "https://jkhorngui.github.io/calendar/userData.json",
+		
+		// on success, find specific user from all users and verify password
 		success: function( userData ){
 			
+			// get user object
 			var userObj = findUser( userID, userData )
-			if( password === userObj.password ){
-				$('#loginMsg').html("login success");
-			}
-			else {
-				$('#loginMsg').html("login failed");
-			}
 			
-			//test = userData;
-		},
-		failure: function(){console.log("fail");}
+			// verify password
+			checkPassword( entPass, userObj );
+		}
 	});
 };
 
+/**
+*	findUser( userID, userData )
+*	param: userID is an integer. It is the ID of the user selected by the user.
+*		   userData is an array of user objects of all users
+*	Traverses through array to find correct user object.
+*/
 var findUser = function( userID, userData ){
+	
+	// i is used for the index to traverse throuhg the array
 	var i;
 	
 	for( i = 0;; i++ ){
+		
+		// checking to see if IDs are the same
+		// the for loop id infinite so it break if the 
+		// statement is true
 		if( userID == userData[i].id ){
 			break;
 		}
 	}
 
+	// return correct user object
 	return userData[i];
 }
+
+/**
+*	checkPassword( entPass, userObj )
+*	param: entPass is a string the user has enetered
+*		   userObj is a user Object
+*	Function verifies the password.
+*/
+var checkPassword = function( entPass, userObj ){
+	
+	// displays message if login is successful or not.
+	if( entPass === userObj.password ){
+		$('#loginMsg').html("login success");
+	}
+	else {
+		$('#loginMsg').html("login failed");
+	}
+};
