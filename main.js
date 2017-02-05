@@ -5,6 +5,6 @@ var loadUserData = function(){
 		success: function( data ){
 			console.log( 'success', data );
 		},
-		failure: function(console.log("fail");){}
+		failure: function(){console.log("fail");)}
 	});
 };
