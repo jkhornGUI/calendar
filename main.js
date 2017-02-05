@@ -8,8 +8,8 @@ var loadUserData = function(){
 	$.ajax({
 		type: 'GET',
 		url: "https://jkhorngui.github.io/calendar/userData.json",
-		success: function( UserData ){
-			userObj = findUser( currentUser, Userdata )
+		success: function( userData ){
+			userObj = findUser( userID, userdata )
 			if( password === userObj.password ){
 				$('#loginMsg').html("login success");
 			}
