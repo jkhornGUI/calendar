@@ -26,3 +26,4 @@ var findUser = function( user, userData ){
 	for( i = 0; user !== userData[i].id; i++ ){}
 
 	return userData[i];
+}
