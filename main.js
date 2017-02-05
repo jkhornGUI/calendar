@@ -4,7 +4,7 @@ var loadUserData = function(){
 		type: 'GET',
 		url: "https://jkhorngui.github.io/calendar/userData.json",
 		success: function( data ){
-			console.log('success');
+			$('#loginMsg').html("success");
 		},
 		failure: function(){console.log("fail");}
 	});
