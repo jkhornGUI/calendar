@@ -1,4 +1,4 @@
-var currentUser;
+var currentUser = $('#user').val();
 
 var loadUserData = function(){
 	$.ajax({
