@@ -26,8 +26,10 @@ var loadUserData = function(){
 };
 
 var findUser = function( user, userData ){
-
-	for( i = 0; user !== (userData[i]).id; i++ ){}
+	console.log(userData);
+	console.log(userData[0]);
+	console.log(userData[0].id);
+	//for( i = 0; user !== (userData[i]).id; i++ ){}
 
 	return userData[i];
 }
