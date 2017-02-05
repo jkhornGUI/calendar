@@ -1,4 +1,5 @@
 var userID;
+var test;
 
 var loadUserData = function(){
 
@@ -9,6 +10,7 @@ var loadUserData = function(){
 		type: 'GET',
 		url: "https://jkhorngui.github.io/calendar/userData.json",
 		success: function( userData ){
+			/*
 			var userObj = findUser( userID, userData )
 			if( password === userObj.password ){
 				$('#loginMsg').html("login success");
@@ -16,6 +18,8 @@ var loadUserData = function(){
 			else {
 				$('#loginMsg').html("login failed");
 			}
+			*/
+			test = userData;
 		},
 		failure: function(){console.log("fail");}
 	});
