@@ -4,6 +4,7 @@ var loadUserData = function(){
 		url: "userData.json",
 		success: function( data ){
 			console.log( 'success', data );
-		}
+		},
+		failure: function(console.log("fail");){}
 	});
 };
