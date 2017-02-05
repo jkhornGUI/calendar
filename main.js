@@ -25,11 +25,14 @@ var loadUserData = function(){
 	});
 };
 
-var findUser = function( user, userData ){
-	console.log(userData);
-	console.log(userData[0]);
-	console.log(userData[0].id);
-	//for( i = 0; user !== (userData[i]).id; i++ ){}
+var findUser = function( userID, userData ){
+	var i;
+	
+	for( i = 0;; i++ ){
+		if( userID == userData[i].id ){
+			break;
+		}
+	}
 
 	return userData[i];
 }
