@@ -25,32 +25,34 @@
 			<div class="jumbotron">
 				<h1>Roomies Calendar</h1>
 			</div>
-			<form id="login" class="form-horizontal">
+			<div id="login">
+				<form id="loginForm" class="form-horizontal">
 			
-				<!-- this is the drop down menu populated w/ users -->
-				<div class="form-group">
-					<label for="user" class="col-xs-3 control-label">User</label>
-					<div class="col-xs-6">
-						<select class="form-control" id="user">
-							<option value="1">Jerra</option>
-							<option value="2">Kevin</option>
-							<option value="3">Solyna</option>
-							<option value="4">Natasha</option>
-						</select>
+					<!-- this is the drop down menu populated w/ users -->
+					<div class="form-group">
+						<label for="user" class="col-xs-3 control-label">User</label>
+						<div class="col-xs-6">
+							<select class="form-control" id="user">
+								<option value="1">Jerra</option>
+								<option value="2">Kevin</option>
+								<option value="3">Solyna</option>
+								<option value="4">Natasha</option>
+							</select>
+						</div>
 					</div>
-				</div>
 				
-				<!-- input section for user entered password -->
-				<div class="form-group" id="pwdGroup">
-					<label for="pwd" class="col-xs-3 control-label">Password</label>
-					<div class="col-xs-6">
-						<input type="password" class="form-control" id="pwd">
+					<!-- input section for user entered password -->
+					<div class="form-group" id="pwdGroup">
+						<label for="pwd" class="col-xs-3 control-label">Password</label>
+						<div class="col-xs-6">
+							<input type="password" class="form-control" id="pwd">
+						</div>
+						<button type="submit" class="btn btn-info" onclick="loadUserData(); return false;">Login</button>
 					</div>
-					<button type="submit" class="btn btn-info" onclick="loadUserData(); return false;">Login</button>
-				</div>
-				<div class="col-xs-offset-3 col-xs-6" id="loginMsg">
-				</div>
-			</form>
+					<div class="col-xs-offset-3 col-xs-6" id="loginMsg">
+					</div>
+				</form>
+			</div>
 			<div id="firstTimeLogin">
 			</div>
 		</div>
