@@ -64,7 +64,7 @@ var checkPassword = function( entPass, userObj ){
 		$('#loginMsg').html("login success");
 			
 		if( userObj.firstTimeLogin ){
-			$("firstTimeLogin").html(chgPass);
+			$("#firstTimeLogin").html(chgPass);
 		}
 	}
 	else {
