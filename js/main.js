@@ -1,5 +1,6 @@
 // userID used to hold userID of user selected
 var userID;
+var userObj;
 
 /**
 *	loadUserData()
@@ -19,7 +20,7 @@ var loadUserData = function(){
 	$.get( "https://jkhorngui.github.io/calendar/userData.json",
 			function( userData ){
 			// get user object
-			var userObj = findUser( userID, userData )
+			userObj = findUser( userID, userData )
 			// verify password
 			checkPassword( entPass, userObj );
 		});
@@ -61,6 +62,10 @@ var checkPassword = function( entPass, userObj ){
 	// displays message if login is successful or not.
 	if( entPass === userObj.password ){
 		$('#loginMsg').html("login success");
+			
+		if( userObj.firstTimeLogin ){
+			$("firstTimeLogin").html(chgPass);
+		}
 	}
 	else {
 		$('#loginMsg').html("login failed");

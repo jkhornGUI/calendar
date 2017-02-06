@@ -1,0 +1,1 @@
+var chgPass= '<form id="changePassw" class="form-horizontal"><label for="newPass" class="col-xs-3 control-label">New Password<label><div class="col-xs-6"><input type="password" class="control-form" id="newPwd"><button type="submit" class="btn btn-info" >Submit</button></div><form>';

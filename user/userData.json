@@ -3,24 +3,24 @@
 		"id": 1,
 		"user": "Jerra",
 		"password": "password",
-		"newUser":	1
+		"firstTimeLogin":	1
 	},
 	{
 		"id": 2,
 		"user": "Kevin",
 		"password": "password",
-		"newUser": 1
+		"firstTimeLogin": 1
 	},
 	{
 		"id": 3,
 		"user": "Solyna",
 		"password": "password",
-		"newUser": 1
+		"firstTimeLogin": 1
 	},
 	{
 		"id": 4,
 		"user": "Natasha",
 		"password": "password",
-		"newUser": 1
+		"firstTimeLogin": 1
 	}
 ]
