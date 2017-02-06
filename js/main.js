@@ -17,7 +17,7 @@ var loadUserData = function(){
 	var entPass = $('#pwd').val();
 
 	// ajax call to get json of all user data
-	$.get( "https://jkhorngui.github.io/calendar/userData.json",
+	$.get( "https://jkhorngui.github.io/calendar/user/userData.json",
 			function( userData ){
 			// get user object
 			userObj = findUser( userID, userData )
