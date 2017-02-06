@@ -16,20 +16,13 @@ var loadUserData = function(){
 	var entPass = $('#pwd').val();
 
 	// ajax call to get json of all user data
-	$.ajax({
-		type: 'GET',
-		url: "https://jkhorngui.github.io/calendar/userData.json",
-		
-		// on success, find specific user from all users and verify password
-		success: function( userData ){
-			
+	$.get( "https://jkhorngui.github.io/calendar/userData.json",
+			function( userData ){
 			// get user object
 			var userObj = findUser( userID, userData )
-			
 			// verify password
 			checkPassword( entPass, userObj );
-		}
-	});
+		});
 };
 
 /**
