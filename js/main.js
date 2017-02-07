@@ -73,5 +73,6 @@ var checkPassword = function( entPass, userObj ){
 	}
 	else {
 		$('#loginMsg').html("login failed");
+		$("#pwdInput").addClass('has-error');
 	}
 };
