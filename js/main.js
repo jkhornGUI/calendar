@@ -1,5 +1,4 @@
 // userID used to hold userID of user selected
-var userID;
 var userObj;
 
 $(document).ready( function(){
@@ -15,7 +14,7 @@ $(document).ready( function(){
 var loadUserData = function(){
 
 	// get userID from the user selected
-	userID = $('#user').val();
+	var userID = $('#user').val();
 	
 	// get pass entered by user
 	var entPass = $('#pwd').val();
@@ -65,7 +64,7 @@ var checkPassword = function( entPass, userObj ){
 	
 	// displays message if login is successful or not.
 	if( entPass === userObj.password ){
-		$('#loginMsg').html("login success");
+		$('#loginMsg').html("Since it's your first time logging in, change your password.");
 		
 		// display change password form when first login		
 		if( userObj.firstTimeLogin ){
@@ -83,7 +82,7 @@ var checkPassword = function( entPass, userObj ){
 		$("#pwd").attr("disabled",true);
 	}
 	else {
-		$('#loginMsg').html("login failed");
+		$('#loginMsg').html("Login Failed");
 		$("#pwdInput").addClass('has-error');
 	}
 };
