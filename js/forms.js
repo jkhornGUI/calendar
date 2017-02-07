@@ -1,3 +1,26 @@
+var formLogin =		'<form id="loginForm" class="form-horizontal">'
+						//<!-- this is the drop down menu populated w/ users -->
+					+	'<div class="form-group">'
+					+		'<label for="user" class="col-xs-3 control-label">User</label>'
+					+		'<div class="col-xs-6">'
+					+			'<select class="form-control" id="user">'
+					+				'<option value="1">Jerra</option>'
+					+				'<option value="2">Kevin</option>'
+					+				'<option value="3">Solyna</option>'
+					+				'<option value="4">Natasha</option>'
+					+			'</select>'
+					+		'</div>'
+					+	'</div>'
+						//<!-- input section for user entered password -->
+					+	'<div class="form-group" id="pwdGroup">'
+					+		'<label for="pwd" class="col-xs-3 control-label">Password</label>'
+					+		'<div class="col-xs-6">'
+					+			'<input type="password" class="form-control" id="pwd">'
+					+		'</div>'
+					+		'<button type="submit" class="btn btn-info" onclick="loadUserData(); return false;">Login</button>'
+					+	'</div>'
+					+'</form>';
+
 var chgPassForm =	'<form id="changePassw" class="form-horizontal">'
 					+	'<div class="form-group" id="chgPwdGroup">'
 					+		'<label for="chgPwd" class="col-xs-3 control-label">New Password</label>'

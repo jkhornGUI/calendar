@@ -2,6 +2,10 @@
 var userID;
 var userObj;
 
+$(document).ready( function(){
+	$( "#login" ).html( formLogin );
+});
+
 /**
 *	loadUserData()
 *	This function takes the values selected/entered by the user.
