@@ -64,7 +64,7 @@ var checkPassword = function( entPass, userObj ){
 	
 	// displays message if login is successful or not.
 	if( entPass === userObj.password ){
-		$('#loginMsg').html("Since it's your first time logging in, change your password.");
+		$('#loginMsg').html("Please change your password.");
 		
 		// display change password form when first login		
 		if( userObj.firstTimeLogin ){
