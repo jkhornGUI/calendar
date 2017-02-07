@@ -78,6 +78,9 @@ var checkPassword = function( entPass, userObj ){
 		
 		// disable user ability to change users
 		$("#user").attr("disabled",true);
+		
+		// disable user ability to change pass
+		$("#pwd").attr("disabled",true);
 	}
 	else {
 		$('#loginMsg').html("login failed");
