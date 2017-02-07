@@ -66,10 +66,18 @@ var checkPassword = function( entPass, userObj ){
 	// displays message if login is successful or not.
 	if( entPass === userObj.password ){
 		$('#loginMsg').html("login success");
-			
+		
+		// display change password form when first login		
 		if( userObj.firstTimeLogin ){
 			$("#firstTimeLogin").html(chgPassForm);
 		}
+		
+		// remove red border if in the case the user enetered
+		// pass incorrectly
+		$("#pwdInput").removeClass('has-error');
+		
+		// disable user ability to change users
+		$("#user").attr("disabled",true);
 	}
 	else {
 		$('#loginMsg').html("login failed");
