@@ -86,3 +86,12 @@ var checkPassword = function( entPass, userObj ){
 		$("#pwdInput").addClass('has-error');
 	}
 };
+
+var test = function(){
+	$.ajax({
+			url: "https://jkhorngui.github.io/calendar/user/test.json",
+			success: function(result){
+				console.log(result);
+			}
+	});
+};
