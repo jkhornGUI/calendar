@@ -17,8 +17,7 @@ var formLogin =		'<form id="loginForm" class="form-horizontal">'
 					+		'<div class="col-xs-6" id="pwdInput">'
 					+			'<input type="password" class="form-control" id="pwd">'
 					+		'</div>'
-					//+		'<button type="submit" class="btn btn-info" onclick="loadUserData(); return false;">Login</button>'
-					+		'<button type="submit" class="btn btn-info" onclick="test(); return false;">Login</button>'
+					+		'<button type="submit" class="btn btn-info" onclick="loadUserData(); return false;">Login</button>'					
 					+	'</div>'
 					+'</form>';
 
