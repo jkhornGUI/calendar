@@ -4,4 +4,6 @@ fwrite($myfile, "hello");
 
 fclose($myfile);
 
+echo "writing";
+
 ?>
